@@ -48,7 +48,7 @@ python3 run_convert_all.py
 # --abs-threshold t : fixed absolute cut |A| ≥ t (scale-dependent). 
 
 # ---------- 4) Run netctrl (driver nodes) ---------- 
-# Run inside the SCODE result directory (e.g., out_d5_i500) 
+# Run inside the SCODE result directory (e.g., out_d4_i300) 
 # Liu mode uses only directed topology; weights/signs are not used in driver counts. 
 netctrl -m liu -o liu.driver input.ncol 
 
