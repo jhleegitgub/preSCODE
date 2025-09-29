@@ -21,10 +21,10 @@ python3 run_prep_all.py
 # ---------- 2) Run SCODE ---------- 
 Rscript SCODE.R <exp_train> <time_train> <out_dir> <G> <D> <C> <I> 
 # Parameters: 
-# G = #TFs (fixed to 311) 
-# C = #cells (count directly from exp_train file) 
-# D (latent dim) by #cells, validated by RSS: 
-# ≤300:3, 300–500:4, 500–800:5, >800:6 # I (iterations) = 500 (good balance of convergence and runtime) 
+# G = number of TFs
+# C = number of cells (count directly from exp_train file) 
+# D = latent dimension (DEFAULT: 4 per SCODE paper; optionally verify via test RSS)
+# I = iterations (start at 100; increase until test RSS no longer improves, then keep it
 
 # SCODE outputs in <out_dir>: 
 # A.txt (G×G inferred network; remember A(i,j) = j → i) 
