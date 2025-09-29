@@ -27,9 +27,8 @@ Rscript SCODE.R <exp_train> <time_train> <out_dir> <G> <D> <C> <I>
 # I = iterations (start at 100; increase until test RSS no longer improves, then keep it
 
 # SCODE outputs in <out_dir>: 
-# A.txt (G×G inferred network; remember A(i,j) = j → i) 
-# B.txt (D×D) # W.txt (G×D) 
-# RSS.txt (single number) 
+# A.txt (G×G) # B.txt (D×D) 
+# W.txt (G×D) # RSS.txt (single number) 
 
 # ---------- 2a) (Recommended) Multiple runs for stability ---------- 
 # The authors recommend running SCODE multiple times and averaging A → meanA.txt 
