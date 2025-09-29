@@ -26,8 +26,7 @@ Rscript SCODE.R <exp_train> <time_train> <out_dir> <G> <D> <C> <I>
 # D (latent dim) by #cells, validated by RSS: 
 # ≤300:3, 300–500:4, 500–800:5, >800:6 # I (iterations) = 500 (good balance of convergence and runtime) 
 
-# Example: 
-# Rscript SCODE.R exp_train.txt time_train.txt out_d5_i500 311 5 <C> 500 # # SCODE outputs in <out_dir>: 
+# SCODE outputs in <out_dir>: 
 # A.txt (G×G inferred network; remember A(i,j) = j → i) 
 # B.txt (D×D) # W.txt (G×D) 
 # RSS.txt (single number) 
@@ -35,7 +34,7 @@ Rscript SCODE.R <exp_train> <time_train> <out_dir> <G> <D> <C> <I>
 # ---------- 2a) (Recommended) Multiple runs for stability ---------- 
 # The authors recommend running SCODE multiple times and averaging A → meanA.txt 
 ruby run_R.rb <Input1> <Input2> <OutDir> <G> <D> <C> <I> <R> 
-# where R = number of repeats (e.g., 20–50). We skipped this when runtime was tight. 
+# where R = number of repeats (e.g., 20–50).
 
 
 # ---------- 3) Convert A.txt → edge list / .ncol ---------- 
